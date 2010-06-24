@@ -6,7 +6,7 @@
 
 QT       += core gui declarative
 
-TARGET = timetrack
+TARGET = aikarauta
 TEMPLATE = app
 
 
