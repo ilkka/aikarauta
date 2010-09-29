@@ -1,6 +1,9 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
+#include <QDeclarativeItem>
+#include <QResizeEvent>
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -23,5 +26,13 @@ void MainWindow::changeEvent(QEvent *e)
         break;
     default:
         break;
+    }
+}
+
+void MainWindow::resizeEvent(QResizeEvent *e)
+{
+    QDeclarativeItem* o = static_cast<QDeclarativeItem*>(ui->qmlview->rootObject());
+    if (o) {
+        o->setSize(e->size());
     }
 }
