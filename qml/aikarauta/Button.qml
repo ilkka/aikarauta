@@ -8,6 +8,7 @@ import Qt 4.7
 
 Item {
     id: pushbutton
+    Common { id: mx }
 
     property string text: "Button"
     property bool checkable: false
@@ -17,4 +18,15 @@ Item {
 
     width: Math.max(text.width + 20, 110)
     height: Math.max(text.height + 12, 23)
+
+    Text {
+        id: text
+        font.pixelSize: mx.fontSize
+        color: mx.fontColor
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.verticalCenterOffset: pushbutton.state==="pressed"?1:0
+        anchors.horizontalCenterOffset: pushbutton.state==="pressed"?1:0
+        text: pushbutton.text
+    }
 }
