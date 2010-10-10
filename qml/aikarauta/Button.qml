@@ -82,12 +82,24 @@ Item {
             }
             PropertyChanges {
                 target: buttonHoverImage
-                opacity: 1
+                opacity: 0
             }
         },
         State {
             name: "highlighted"
             when: mouseRegion.containsMouse && !pushbutton.checked
+            PropertyChanges {
+                target: buttonImage
+                opacity: 0
+            }
+            PropertyChanges {
+                target: buttonActiveImage
+                opacity: 0
+            }
+            PropertyChanges {
+                target: buttonHoverImage
+                opacity: 1
+            }
         }
     ]
 
