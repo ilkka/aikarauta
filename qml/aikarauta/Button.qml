@@ -33,6 +33,7 @@ Item {
         anchors.fill: parent
         border.left: 10; border.top: 10
         border.right: 10; border.bottom: 10
+        opacity: 0
     }
 
     BorderImage {
@@ -41,6 +42,7 @@ Item {
         anchors.fill: parent
         border.left: 10; border.top: 10
         border.right: 10; border.bottom: 10
+        opacity: 0
     }
 
     Text {
