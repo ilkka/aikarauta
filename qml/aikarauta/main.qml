@@ -7,4 +7,9 @@ Rectangle {
         text: "Hello World"
         anchors.centerIn: parent
     }
+    Button {
+        text: "foobar"
+        anchors.bottom: parent.bottom
+        anchors.horizontalCenter: parent.horizontalCenter
+    }
 }
