@@ -19,6 +19,30 @@ Item {
     width: Math.max(text.width + 20, 110)
     height: Math.max(text.height + 12, 23)
 
+    BorderImage {
+        id: buttonImage
+        source: Qt.resolvedUrl("images/button.png")
+        anchors.fill: parent
+        border.left: 10; border.top: 10
+        border.right: 10; border.bottom: 10
+    }
+
+    BorderImage {
+        id: buttonActiveImage
+        source: Qt.resolvedUrl("images/button-active.png")
+        anchors.fill: parent
+        border.left: 10; border.top: 10
+        border.right: 10; border.bottom: 10
+    }
+
+    BorderImage {
+        id: buttonHoverImage
+        source: Qt.resolvedUrl("images/button-hover.png")
+        anchors.fill: parent
+        border.left: 10; border.top: 10
+        border.right: 10; border.bottom: 10
+    }
+
     Text {
         id: text
         font.pixelSize: mx.fontSize
