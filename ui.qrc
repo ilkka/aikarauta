@@ -1,5 +1,0 @@
-<RCC>
-    <qresource prefix="/aikarauta">
-        <file>qml/main.qml</file>
-    </qresource>
-</RCC>

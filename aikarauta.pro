@@ -1,21 +1,27 @@
-#-------------------------------------------------
-#
-# Project created by QtCreator 2010-06-07T16:06:05
-#
-#-------------------------------------------------
+# Add more folders to ship with the application, here
+folder_01.source = qml/aikarauta
+folder_01.target = qml
+DEPLOYMENTFOLDERS = folder_01
 
-QT       += core gui declarative
+# Additional import path used to resolve Qml modules in Creator's code model
+QML_IMPORT_PATH =
 
-TARGET = aikarauta
-TEMPLATE = app
+# Avoid auto screen rotation
+#DEFINES += ORIENTATIONLOCK
 
+# Needs to be defined for Symbian
+DEFINES += NETWORKACCESS
 
-SOURCES += main.cpp\
-        mainwindow.cpp
+symbian:TARGET.UID3 = 0xE75A699C
 
-HEADERS  += mainwindow.h
+# Define QMLJSDEBUGGER to enable basic debugging (setting breakpoints etc)
+# Define QMLOBSERVER for advanced features (requires experimental QmlInspector plugin!)
+#DEFINES += QMLJSDEBUGGER
+#DEFINES += QMLOBSERVER
 
-FORMS    += mainwindow.ui
+# The .cpp file which was generated for your project. Feel free to hack it.
+SOURCES += main.cpp
 
-RESOURCES += \
-    ui.qrc
+# Please do not modify the following two lines. Required for deployment.
+include(qmlapplicationviewer/qmlapplicationviewer.pri)
+qtcAddDeployment()
