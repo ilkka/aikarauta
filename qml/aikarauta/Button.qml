@@ -29,4 +29,35 @@ Item {
         anchors.horizontalCenterOffset: pushbutton.state==="pressed"?1:0
         text: pushbutton.text
     }
+
+    MouseArea {
+        id: mouseRegion
+        hoverEnabled: true
+        anchors.fill: parent
+        onClicked: {
+            if (pushbutton.checkable) {
+                pushbutton.checked = !pushbutton.checked
+            }
+            pushbutton.clicked()
+        }
+    }
+
+    states: [
+        State {
+            name: "pressed"
+            when: mouseRegion.pressed || pushbutton.checked
+        },
+        State {
+            name: "highlighted"
+            when: mouseRegion.containsMouse && !pushbutton.checked
+        }
+    ]
+
+    transitions: [
+        Transition {
+            from: "highlighted"
+            to: ""
+            NumberAnimation { properties: "opacity"; duration: 130 }
+        }
+    ]
 }
