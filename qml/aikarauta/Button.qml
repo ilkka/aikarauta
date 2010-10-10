@@ -72,6 +72,18 @@ Item {
         State {
             name: "pressed"
             when: mouseRegion.pressed || pushbutton.checked
+            PropertyChanges {
+                target: buttonImage
+                opacity: 0
+            }
+            PropertyChanges {
+                target: buttonActiveImage
+                opacity: 1
+            }
+            PropertyChanges {
+                target: buttonHoverImage
+                opacity: 1
+            }
         },
         State {
             name: "highlighted"
