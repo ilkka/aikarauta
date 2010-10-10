@@ -7,7 +7,7 @@ int main(int argc, char *argv[])
 
     QmlApplicationViewer viewer;
     viewer.setOrientation(QmlApplicationViewer::Auto);
-    viewer.setMainQmlFile(QLatin1String("qml/hulululu/main.qml"));
+    viewer.setMainQmlFile(QLatin1String("qml/aikarauta/main.qml"));
     viewer.show();
 
     return app.exec();
